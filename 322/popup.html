@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <header class="head">
+    <span class="title">⭐ FortPort Tools</span>
+    <span class="counter" id="counter">0</span>
+  </header>
+
+  <section class="theme-section">
+    <label for="themeSelect" class="label">Тема FortPort:</label>
+    <div class="theme-row">
+      <select id="themeSelect"></select>
+      <button id="resetTheme" class="btn btn-reset" title="Сбросить тему">✕</button>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="grid" id="grid"></div>
+
+  <footer class="foot">
+    <button id="importBtn" class="btn btn-import">⬆ Импорт</button>
+    <button id="exportTxtBtn" class="btn btn-export">⬇ .txt</button>
+    <button id="exportJsonBtn" class="btn btn-export">⬇ .json</button>
+  </footer>
+
+  <footer class="foot">
+    <button id="clearBtn" class="btn btn-clear">Очистить всё</button>
+  </footer>
+
+  <script src="themes.js" defer></script>
+  <script src="popup.js" defer></script>
+</body>
+</html>

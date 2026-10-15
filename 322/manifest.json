@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "FortPort Tools",
+  "version": "5.0.0",
+  "description": "Избранное, темы оформления и кастомизация Жеки для FortPort.",
+  "permissions": ["storage", "unlimitedStorage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FortPort Tools",
+    "default_icon": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["new-post-dark.png", "icon.png"],
+      "matches": ["*://fortport.ru/*", "*://*.fortport.ru/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://fortport.ru/*", "*://*.fortport.ru/*"],
+      "css": ["style.css"],
+      "js": ["themes.js", "content.js", "jeka-content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
